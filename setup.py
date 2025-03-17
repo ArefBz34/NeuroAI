@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="NeuroAI_proj",
+    name="NeuroAI",
     version="0.1.0",
     author="Mohammad Aref Bagherzadeh",
     author_email="aref.bagherzadeh.ab@gmail.com",
