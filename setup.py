@@ -8,7 +8,7 @@ setup(
     description="A new window to neuroradiology datasets",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/your-package",
+    url="https://github.com/ArefBz34/NeuroAI",
     packages=find_packages(),
     install_requires=[
         'pandas>=2.2.2',
