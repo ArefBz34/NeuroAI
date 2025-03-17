@@ -1,24 +1,26 @@
-name: Publish Python Package
+name: Publish NeuroAI to PyPI
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
-  deploy:
+  publish-neuroai:
+    environment: testpypi_neuroai  # Must match your PyPI environment name
     runs-on: ubuntu-latest
     permissions:
-      id-token: write  # Required for OIDC
+      id-token: write  # Essential for OIDC
       contents: read
 
     steps:
     - uses: actions/checkout@v4
+    
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.x'
+        python-version: '3.10'
         
-    - name: Install build tools
+    - name: Install dependencies
       run: pip install setuptools wheel twine
       
     - name: Build package
@@ -27,4 +29,4 @@ jobs:
     - name: Publish to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
-        verbose: true
+        repository-url: https://test.pypi.org/legacy/  # Remove for real PyPI
