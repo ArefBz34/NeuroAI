@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="your-package-name",
+    name="NeuroAI_proj",
     version="0.1.0",
-    author="Your Name",
-    author_email="your@email.com",
-    description="Your package description",
+    author="Mohammad Aref Bagherzadeh",
+    author_email="aref.bagherzadeh.ab@gmail.com",
+    description="A new window to neuroradiology datasets",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/yourusername/your-package",
