@@ -6,10 +6,9 @@ on:
 
 jobs:
   publish-neuroai:
-    environment: testpypi_neuroai  # Must match your PyPI environment name
+    environment: testpypi_neuroai
     runs-on: ubuntu-latest
     permissions:
-      id-token: write  # Essential for OIDC
       contents: read
 
     steps:
@@ -24,9 +23,13 @@ jobs:
       run: pip install setuptools wheel twine
       
     - name: Build package
-      run: python setup.py sdist bdist_wheel
+      run: |
+        rm -rf dist/*
+        python setup.py sdist bdist_wheel
       
-    - name: Publish to PyPI
+    - name: Publish to TestPyPI
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
-        repository-url: https://test.pypi.org/legacy/  # Remove for real PyPI
+        repository-url: https://test.pypi.org/legacy/
+        user: __token__
+        password: ${{ secrets.TEST_PYPI_API_TOKEN }}
