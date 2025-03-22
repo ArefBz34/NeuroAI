@@ -23,7 +23,10 @@ jobs:
       run: pip install setuptools wheel twine
     
     - name: Clean previous builds
-      run: rm -rf dist/* build/*
+      run: |
+        rm -rf dist/*
+        rm -rf build/*
+        rm -rf *.egg-info
     
     - name: Build package
       run: |
