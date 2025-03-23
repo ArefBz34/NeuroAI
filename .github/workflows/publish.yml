@@ -6,7 +6,6 @@ on:
 
 jobs:
   publish-neuroai:
-    environment: testpypi_neuroai
     runs-on: ubuntu-latest
     permissions:
       contents: read
