@@ -10,7 +10,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/ArefBz34/NeuroAI",
     packages=find_packages(),
-    install_requires=['pip',
+    install_requires=[
         'pandas>=2.2.2',
         'requests>=2.32.3',
         'groq>=0.3.0',
