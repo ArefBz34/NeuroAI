@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="NeuroAI",
-    version="0.1.9",
+    version="0.1.10",
     author="Mohammad Aref Bagherzadeh",
     author_email="aref.bagherzadeh.ab@gmail.com",
     description="A new window to neuroradiology datasets",
