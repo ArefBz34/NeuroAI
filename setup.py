@@ -15,7 +15,7 @@ setup(
         'requests>=2.32.3',
         'groq>=0.3.0',
         'openpyxl>=3.1.2',
-        'langgraph>=0.0.22',
+        'langgraph>=0.0.22',  # Requires --pre during installation if it's a pre-release
         'python-dotenv>=1.0.1'
     ],
     classifiers=[
@@ -26,7 +26,7 @@ setup(
     python_requires='>=3.8',
     entry_points={
         'console_scripts': [
-            'your-command=your_package.module:main',
+            'neuroai=neuroai.cli:main',  # Update with your actual entry point
         ],
     },
     extras_require={
